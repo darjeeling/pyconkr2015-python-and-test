@@ -14,6 +14,6 @@ class TestBBS(unittest.TestCase):
         self.browser.quit()
 
     def test_list_web(self):
-        list_url = "%s/%s/" % ( self.base_url, 'bbs/list/')
+        list_url = "%s/%s" % ( self.base_url, 'bbs/list/')
         aa = self.browser.get(list_url)
         self.assertIn("hahaha", self.browser.page_source)
