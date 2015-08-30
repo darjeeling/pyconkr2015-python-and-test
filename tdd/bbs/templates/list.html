@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% block contents %}
+    {% if object_list  %}
+        <div class="panel">
+        <table class="table">
+        <thead>
+        <tr>
+            <th> id  </th>
+            <th> writer  </th>
+            <th> subject </th>
+            <th> create_datetime </th>
+        </tr>
+        </thead>
+        {% for obj in object_list %}
+            <tr>
+                <td> {{ obj.id  }} </td>
+                <td> {{ obj.writer }} </td>
+                <td> {{ obj.subject }} </td>
+                <td> {{ obj.create_datetime }} </td>
+            </tr>
+        {%  endfor %}
+        </table>
+        </div>
+
+        {% bootstrap_pagination page_obj %}
+
+    {% endif %}
+
+{% endblock %}
+{% block scripts %}
+{% endblock %}

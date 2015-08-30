@@ -1,3 +1,21 @@
-from django.test import TestCase
+# -*- coding: utf-8 -*-
 
-# Create your tests here.
+from django.test import TestCase, Client
+from django.core.urlresolvers import resolve
+from django.core.urlresolvers import Resolver404
+
+
+class TestModel(TestCase):
+    def setUp(self):
+        pass
+
+    def tearDown(self):
+        pass
+
+
+class TestView(TestCase):
+    def setUp(self):
+        pass
+
+    def tearDown(self):
+        pass
