@@ -6,6 +6,8 @@ env:
 - test: 1
 install:
 - pip install -r requirements.txt
+before_script:
+- cd tdd && ./manage.py migrate
 script:
 - py.test --cov tdd
 after_success:
