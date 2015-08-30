@@ -1,0 +1,12 @@
+language: python
+sudo: false
+python:
+- 2.7
+env:
+- test: 1
+install:
+- pip install requirements.txt
+script:
+- py.test --cov tdd
+after_success:
+- coveralls
